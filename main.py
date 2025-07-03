@@ -1,6 +1,10 @@
 from fastapi import FastAPI
 app = FastAPI()
 
-@app.get("/")
+@app.get("/login")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "welcome to my api !!!"}
+
+@app.get("/posts")
+def get_posts():
+    return {"data":"This is a list of your posts"}
